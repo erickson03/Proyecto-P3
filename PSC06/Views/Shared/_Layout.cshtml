@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Título dinámico basado en ViewBag.Title y nombre de la aplicación -->
+    <title>@ViewBag.Title - P3 Aplicación</title>
+    <!-- Meta para hacer el sitio responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Renderizado de estilos CSS desde bundles definidos en ASP.NET -->
+    @Styles.Render("~/Content/css")
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Estilos personalizados para el menú -->
+    <link rel="stylesheet" href="~/styles/Menu.css" />
+</head>
+
+<body>
+    <header>
+        <!-- Contenedor flexible para distribuir los elementos del header -->
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <!-- Botón para alternar la visibilidad del sidebar (menú lateral) -->
+            <button onclick="toggleSidebar()" title="Menú" style="font-size: 1.2rem; background: none; border: none; color: white;">
+                <i class="fas fa-bars"></i> <!-- Icono de menú hamburguesa -->
+            </button>
+
+            <!-- Título dinámico que se muestra en el header -->
+            <h1 style="margin: 0; font-size: 1.2rem;">@ViewBag.Title</h1>
+
+            <!-- Botón para cerrar sesión -->
+            <button onclick="cerrarSesion()" title="Cerrar sesión" style="font-size: 1.2rem; background: none; border: none; color: white;">
+                <i class="fas fa-sign-out-alt"></i> <!-- Icono de cerrar sesión -->
+            </button>
+        </div>
+    </header>
+
+    <div class="layout-container">
+        <!-- Menú lateral -->
+        <nav id="sidebar">
+            <ul>
+                <!-- Elemento de menú con íbmenú desplegable -->
+                <li class="menu-item" onclick="toggleSubmenu(this)">
+                    <div class="menu-title">
+                        <i class="fas fa-folder"></i> <!-- Icono de carpeta -->
+                        <span>Usuarios</span> <!-- Texto del menú principal -->
+                        <i class="fas fa-chevron-down arrow-icon"></i> <!-- Flecha para indicar desplegable -->
+                    </div>
+                    <!-- Submenú con enlaces generados con Html.ActionLink de ASP.NET MVC -->
+                    <ul class="submenu">
+                        <li>@Html.ActionLink("Consulta", "Query", "User")</li>
+                        <li>@Html.ActionLink("Registro", "Index", "User")</li>
+                        <li>@Html.ActionLink("Permisos", "Index", "User")</li>
+                    </ul>
+                </li>
+
+                <!-- Enlaces simples de menú -->
+                <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+                <li>@Html.ActionLink("Soporte", "Contact", "Home")</li>
+            </ul>
+        </nav>
+
+        <!-- Contenedor principal donde se renderiza el contenido de la vista -->
+        <main id="main-content">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <!-- Pie de página con el año actual -->
+        <p>@DateTime.Now.Year - P3 Aplicación</p>
+    </footer>
+
+    <!-- Inclusión de scripts de jQuery y Bootstrap desde bundles -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <!-- Sección opcional para scripts adicionales específicos de cada vista -->
+    @RenderSection("scripts", required: false)
+
+    <script>
+        // Función para mostrar u ocultar el sidebar agregando o quitando la clase 'collapsed'
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('collapsed');
+        }
+
+        // Función para alternar la visibilidad del submenú dentro de un elemento de menú
+        function toggleSubmenu(item) {
+            item.classList.toggle('active');
+        }
+
+        // Función simulada para cerrar sesión, muestra alerta y puede redirigir después
+        function cerrarSesion() {
+            alert('Sesión cerrada');
+            // Aquí puedes redirigir a /Account/Logout o lo que necesites
+        }
+    </script>
+</body>
+</html>
+

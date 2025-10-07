@@ -1,0 +1,212 @@
+﻿
+/* Aplica box-sizing para incluir padding y border dentro del ancho y alto total de los elementos */
+/* También resetea márgenes y padding por defecto de todos los elementos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Establece altura total para body y html y define la fuente base */
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Configura body como contenedor flex vertical */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para header y footer: fondo oscuro, texto blanco, padding y centrado */
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Contenedor principal de layout con display flex horizontal */
+.layout-container {
+    display: flex;
+    flex: 1; /* Ocupa todo el espacio disponible */
+    height: 100%;
+    overflow: hidden; /* Oculta contenido que desborde */
+}
+
+/* Estilo para barra de navegación */
+nav {
+    width: 250px;
+    background-color: #222;
+    color: white;
+    transition: transform 0.3s ease, width 0.3s ease; /* Animaciones suaves para transform y ancho */
+}
+
+    /* Estado colapsado del nav, lo mueve completamente hacia la izquierda (fuera de pantalla) */
+    nav.collapsed {
+        transform: translateX(-100%);
+    }
+
+    /* Quita estilo de lista predeterminado de ul dentro del nav */
+    nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    /* Estilo para cada elemento de lista dentro del nav */
+    nav li {
+        padding: 15px;
+        border-bottom: 1px solid #444;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+        /* Iconos dentro de nav li con margen a la derecha y ancho fijo */
+        nav li i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+/* --------------------------------------------------------------- */
+/* Menú principal y submenú */
+/* --------------------------------------------------------------- */
+
+/* Cada item del menú es un flex container vertical que fuerza a hijos a ocupar todo el ancho */
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Fuerza que hijos (menu-title y submenu) ocupen todo el ancho */
+}
+
+/* Título del menú principal: flex horizontal, centrado vertical, padding y cursor pointer */
+.menu-title {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    text-align: left;
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    cursor: pointer;
+}
+
+    /* Margen derecho para iconos y spans dentro de menu-title */
+    .menu-title i,
+    .menu-title span {
+        margin-right: 10px;
+    }
+
+/* Icono de flecha a la derecha, con transición para rotación */
+.arrow-icon {
+    margin-left: auto; /* Empuja a la derecha */
+    transition: transform 0.3s ease;
+}
+
+/* Si el item está activo, rota la flecha 180 grados */
+.menu-item.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* Submenú oculto por defecto */
+.submenu {
+    display: none;
+    background-color: #333;
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+/* Submenú visible solo cuando el item está activo */
+.menu-item.active .submenu {
+    display: block;
+}
+
+/* Estilo para items del submenú */
+.submenu li {
+    padding: 12px 15px;
+    border-bottom: 1px solid #444;
+    text-align: left;
+    width: 100%;
+}
+
+    /* Enlaces dentro del submenú, ocupan todo el ancho */
+    .submenu li a {
+        display: block;
+        width: 100%;
+        text-align: left;
+        color: inherit;
+        text-decoration: none;
+    }
+
+/* Efecto hover para las opciones principales del menú */
+.menu-title:hover {
+    background-color: #444; /* Cambia el color de fondo al pasar mouse */
+    color: #fff;
+}
+
+/* Efecto hover para opciones del submenú */
+.submenu li:hover {
+    background-color: #444; /* Cambia el color de fondo */
+    color: #fff;
+}
+
+/* Hover en enlaces dentro del submenú, añade subrayado y color blanco */
+.submenu li a:hover {
+    color: #fff;
+    text-decoration: underline; /* Puede quitarse si no se desea subrayado */
+}
+
+/* --------------------------------------------------------------- */
+/* Estilo para el contenido principal */
+main {
+    flex: 1; /* Ocupa espacio restante */
+    padding: 20px;
+    overflow-y: auto; /* Scroll vertical si contenido es muy largo */
+    transition: margin-left 0.3s ease; /* Transición para margen en responsividad */
+}
+
+/* Contenedor de botones del menú con flex horizontal y espacio entre ellos */
+.menu-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #111;
+}
+
+    /* Estilo para botones dentro de .menu-buttons */
+    .menu-buttons button {
+        background-color: #444;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+
+/* Estilos para enlaces */
+a {
+    color: inherit; /* Hereda color del contenedor */
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+/* Media query para pantallas menores o iguales a 768px */
+@media (max-width: 768px) {
+    /* Nav cambia a posición absoluta para sobreponer contenido */
+    nav {
+        position: absolute;
+        height: 100%;
+        z-index: 1000; /* Por encima de otros elementos */
+        left: 0;
+        top: 0;
+    }
+
+    /* Main elimina margen para que ocupe todo el ancho */
+    main {
+        margin-left: 0 !important;
+    }
+}
+

@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ERICKSON\\Desktop\\Itla\\Cuatrimestre 6\\Programaci\u00F3n 3\\Proyecto\\PSC06\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19D03FF5-6AEC-4158-9DA0-0263C39BFB3C}|PSC06\\PSC06.csproj|c:\\users\\erickson\\desktop\\itla\\cuatrimestre 6\\programaci\u00F3n 3\\proyecto\\psc06\\psc06\\views\\user\\query.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19D03FF5-6AEC-4158-9DA0-0263C39BFB3C}|PSC06\\PSC06.csproj|solutionrelative:psc06\\views\\user\\query.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D03FF5-6AEC-4158-9DA0-0263C39BFB3C}|PSC06\\PSC06.csproj|c:\\users\\erickson\\desktop\\itla\\cuatrimestre 6\\programaci\u00F3n 3\\proyecto\\psc06\\psc06\\views\\user\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{19D03FF5-6AEC-4158-9DA0-0263C39BFB3C}|PSC06\\PSC06.csproj|solutionrelative:psc06\\views\\user\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D03FF5-6AEC-4158-9DA0-0263C39BFB3C}|PSC06\\PSC06.csproj|c:\\users\\erickson\\desktop\\itla\\cuatrimestre 6\\programaci\u00F3n 3\\proyecto\\psc06\\psc06\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D03FF5-6AEC-4158-9DA0-0263C39BFB3C}|PSC06\\PSC06.csproj|solutionrelative:psc06\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D03FF5-6AEC-4158-9DA0-0263C39BFB3C}|PSC06\\PSC06.csproj|c:\\users\\erickson\\desktop\\itla\\cuatrimestre 6\\programaci\u00F3n 3\\proyecto\\psc06\\psc06\\models\\viewmodels\\userviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D03FF5-6AEC-4158-9DA0-0263C39BFB3C}|PSC06\\PSC06.csproj|solutionrelative:psc06\\models\\viewmodels\\userviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Query.cshtml",
+              "DocumentMoniker": "C:\\Users\\ERICKSON\\Desktop\\Itla\\Cuatrimestre 6\\Programaci\u00F3n 3\\Proyecto\\PSC06\\PSC06\\Views\\User\\Query.cshtml",
+              "RelativeDocumentMoniker": "PSC06\\Views\\User\\Query.cshtml",
+              "ToolTip": "C:\\Users\\ERICKSON\\Desktop\\Itla\\Cuatrimestre 6\\Programaci\u00F3n 3\\Proyecto\\PSC06\\PSC06\\Views\\User\\Query.cshtml",
+              "RelativeToolTip": "PSC06\\Views\\User\\Query.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowEgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T16:49:13.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Users\\ERICKSON\\Desktop\\Itla\\Cuatrimestre 6\\Programaci\u00F3n 3\\Proyecto\\PSC06\\PSC06\\Views\\User\\Add.cshtml",
+              "RelativeDocumentMoniker": "PSC06\\Views\\User\\Add.cshtml",
+              "ToolTip": "C:\\Users\\ERICKSON\\Desktop\\Itla\\Cuatrimestre 6\\Programaci\u00F3n 3\\Proyecto\\PSC06\\PSC06\\Views\\User\\Add.cshtml",
+              "RelativeToolTip": "PSC06\\Views\\User\\Add.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowCoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T16:43:16.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\ERICKSON\\Desktop\\Itla\\Cuatrimestre 6\\Programaci\u00F3n 3\\Proyecto\\PSC06\\PSC06\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "PSC06\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\ERICKSON\\Desktop\\Itla\\Cuatrimestre 6\\Programaci\u00F3n 3\\Proyecto\\PSC06\\PSC06\\Controllers\\UserController.cs",
+              "RelativeToolTip": "PSC06\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAcwCwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T16:19:27.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\ERICKSON\\Desktop\\Itla\\Cuatrimestre 6\\Programaci\u00F3n 3\\Proyecto\\PSC06\\PSC06\\Models\\ViewModels\\UserViewModels.cs",
+              "RelativeDocumentMoniker": "PSC06\\Models\\ViewModels\\UserViewModels.cs",
+              "ToolTip": "C:\\Users\\ERICKSON\\Desktop\\Itla\\Cuatrimestre 6\\Programaci\u00F3n 3\\Proyecto\\PSC06\\PSC06\\Models\\ViewModels\\UserViewModels.cs",
+              "RelativeToolTip": "PSC06\\Models\\ViewModels\\UserViewModels.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAwEUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T16:03:56.647Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Inicio";
+    Layout = "~/Views/Shared/_LayoutApp.cshtml";
+}
+
+<div class ="row">
+    <form id="frmAcceder">
+        <br />
+        <br />
+
+        <div>
+            Usuario
+            <input type="text"
+                   name="usuario"
+                   class="form-control" />
+        </div>
+        <br />
+        <div>
+            Password
+            <input type="password"
+                   name="password"
+                   class="form-control" />
+        </div>
+        <br />
+        <div>
+            <input type="submit"
+                   class="btn btn-success btn-lg"
+                   value="Entrar" />
+        </div>
+    </form>
+</div>
+
+@section scripts
+    {
+        <script>
+            $(document).ready(function ()
+            {
+                $("#frmAcceder").submit(function (e)
+                {
+                    // previene que la pagina se recargue nuevamente
+                    e.preventDefault();
+                    url = "@Url.Content("~/Acceder/Enter")";
+
+                    // serializa los datos del formulario, convierte los campos tipo (string)
+                    parametros = $(this).serialize();
+
+                    // envia una peticion POST al backend, con la data del formulario (vista)
+                    $.post(url, parametros, function (data)
+                    {
+                        if (data == "1")
+                        {
+                            // si la respuesta del backend es 1 muestra el menu
+                            document.location.href = "@Url.Content("~/")";
+                        }
+                        else
+                        {
+                            // si la respuesta del backend es diferente 1 muestra el login
+                            alert(data);
+                        }
+                    })
+                })
+            })
+        </script>
+    }
+
